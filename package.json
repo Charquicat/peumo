@@ -1,0 +1,24 @@
+{
+  "name": "peumo",
+  "version": "1.0.0",
+  "description": "Es una aplicacion de botanica",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.15.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Charquicat/peumo.git"
+  },
+  "author": "Bruno Gutierrez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Charquicat/peumo/issues"
+  },
+  "homepage": "https://github.com/Charquicat/peumo#readme"
+}
