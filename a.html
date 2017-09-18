@@ -1,0 +1,58 @@
+ <!DOCTYPE html>
+  <html>
+    <head>
+    <meta charset="utf-8">
+      <!--Import Google Icon Font-->
+      <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/css/materialize.min.css">
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <style>       
+        #topbarsearch .input-field .prefix { 
+            width:0rem !important;    
+            }        
+        #topbarsearch nav ul li:hover, nav ul li.active {
+                background-color: none !important;
+            }
+        .input-field .prefix ~ input, .input-field .prefix ~ textarea, .input-field .prefix ~ label, .input-field .prefix ~ .validate ~ label, .input-field .prefix ~ .autocomplete-content{
+            margin-left: 1rem !important;
+            }
+        </style>        
+    </head>
+    <body style="background-color: darkslategray; ">         
+    
+            <div class="" style="background-color: darkslategray;">
+              
+               
+                                <center><i id="boton" class="white-text material-icons prefix" style="text-align: center;">search</i></center>
+                                <input type="text" placeholder="Buscar" id="autocomplete-input" class="autocomplete white-text center-text" >
+               </div>     
+               <blockquote class="white-text">Para buscar solo debes presionar el icono de buscar</blockquote>
+      <!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>
+      <script>
+
+            $(document).ready(function(){                 
+                $('input.autocomplete').autocomplete({
+                data: {
+                    "Peumo": null,
+                    "Araucaria": null,
+                    "Boldo": null,
+                    "Pepino":null
+                }
+                });                
+                });
+window.onload = function(){
+  document.getElementById('boton').onclick = function(){
+    var content = document.getElementById('autocomplete-input').value;
+    window.open("http://192.168.50.6/"+content+".html");
+  }
+
+}
+
+
+      </script>        
+    </body>
+  </html>
